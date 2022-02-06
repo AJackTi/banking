@@ -6,7 +6,7 @@ banking;
 DROP TABLE IF EXISTS `customers`;
 CREATE TABLE `customers`
 (
-    `customer_id`   int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `customer_id`   int(11) NOT NULL AUTO_INCREMENT,
     `name`          varchar(100) NOT NULL,
     `date_of_birth` date         NOT NULL,
     `city`          varchar(100) NOT NULL,
@@ -21,7 +21,7 @@ VALUES (2000, 'Steve', '1978-12-15', 'Delhi', '110075', 1),
        (2002, 'Hadley', '1988-04-30', 'Englewood', '07631', 1),
        (2003, 'Ben', '1988-01-04', 'Manchester', '03102', 0),
        (2004, 'Nina', '1988-05-14', 'Clarkston', '48348', 1),
-       (2005, 'Osman', '1988-11-08', 'Hyattsville', '20782', 0),
+       (2005, 'Osman', '1988-11-08', 'Hyattsville', '20782', 0)
 
 DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE `accounts`
@@ -32,8 +32,9 @@ CREATE TABLE `accounts`
     `account_type` varchar(10) NOT NULL,
     `pin`          varchar(10) NOT NULL,
     `status`       tinyint(4) NOT NULL DEFAULT '1',
-    PRIMARY KEY (`customer_id`),
-    CONSTRAINT 'accounts_FK' FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`)
+    PRIMARY KEY (`account_id`),
+    KEY            `accounts_FK` (`customer_id`),
+    CONSTRAINT `accounts_FK` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=95476 DEFAULT CHARSET=latin1;
 
 INSERT INTO `accounts`
