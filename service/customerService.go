@@ -2,12 +2,13 @@ package service
 
 import (
 	"github.com/AJackTi/banking/domain"
+	"github.com/AJackTi/banking/dto"
 	"github.com/AJackTi/banking/errs"
 )
 
 type CustomerService interface {
 	GetAllCustomer(string) ([]domain.Customer, *errs.AppError)
-	GetCustomer(string) (*domain.Customer, *errs.AppError)
+	GetCustomer(string) (*dto.CustomerResponse, *errs.AppError)
 }
 
 type DefaultCustomerService struct {
@@ -26,8 +27,13 @@ func (s DefaultCustomerService) GetAllCustomer(status string) ([]domain.Customer
 	return s.repo.FindAll(status)
 }
 
-func (s DefaultCustomerService) GetCustomer(id string) (*domain.Customer, *errs.AppError) {
-	return s.repo.ByID(id)
+func (s DefaultCustomerService) GetCustomer(id string) (*dto.CustomerResponse, *errs.AppError) {
+	c, err := s.repo.ByID(id)
+	if err != nil {
+		return nil, err
+	}
+
+	return c.ToDto(), nil
 }
 
 func NewCustomerService(repository domain.CustomerRepository) DefaultCustomerService {
