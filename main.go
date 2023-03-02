@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/AJackTi/banking-lib/logger"
 	"github.com/AJackTi/banking/app"
-	"github.com/AJackTi/banking/logger"
 )
 
 func main() {

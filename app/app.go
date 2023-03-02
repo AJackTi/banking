@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
+	"github.com/AJackTi/banking-lib/logger"
 	"github.com/AJackTi/banking/domain"
-	"github.com/AJackTi/banking/logger"
 	"github.com/AJackTi/banking/service"
 	"github.com/gorilla/mux"
 	"github.com/jmoiron/sqlx"

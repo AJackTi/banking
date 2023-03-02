@@ -5,8 +5,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/AJackTi/banking-lib/errs"
 	"github.com/AJackTi/banking/dto"
-	"github.com/AJackTi/banking/errs"
 	"github.com/AJackTi/banking/mocks/service"
 	"github.com/golang/mock/gomock"
 	"github.com/gorilla/mux"

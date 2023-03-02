@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/AJackTi/banking-lib/errs"
 	"github.com/AJackTi/banking/domain"
-	"github.com/AJackTi/banking/errs"
 	"github.com/gorilla/mux"
 )
 

@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/AJackTi/banking-lib/errs"
 	realdomain "github.com/AJackTi/banking/domain"
 	"github.com/AJackTi/banking/dto"
-	"github.com/AJackTi/banking/errs"
 	"github.com/AJackTi/banking/mocks/domain"
 	"github.com/golang/mock/gomock"
 )

@@ -8,7 +8,7 @@ import (
 	reflect "reflect"
 
 	dto "github.com/AJackTi/banking/dto"
-	errs "github.com/AJackTi/banking/errs"
+	errs "github.com/AJackTi/banking-lib/errs"
 	gomock "github.com/golang/mock/gomock"
 )
 

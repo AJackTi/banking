@@ -1,7 +1,7 @@
 package dto
 
 import (
-	"github.com/AJackTi/banking/errs"
+	"github.com/AJackTi/banking-lib/errs"
 )
 
 type TransactionRequest struct {

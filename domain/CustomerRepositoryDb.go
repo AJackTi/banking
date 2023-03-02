@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/AJackTi/banking/errs"
-	"github.com/AJackTi/banking/logger"
+	"github.com/AJackTi/banking-lib/errs"
+	"github.com/AJackTi/banking-lib/logger"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 )

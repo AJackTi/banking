@@ -3,8 +3,8 @@ package domain
 import (
 	"time"
 
+	"github.com/AJackTi/banking-lib/errs"
 	"github.com/AJackTi/banking/dto"
-	"github.com/AJackTi/banking/errs"
 )
 
 const dbTSLayout = "2006-01-02T15:04:05Z07:00"

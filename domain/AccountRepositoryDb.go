@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/AJackTi/banking/errs"
-	"github.com/AJackTi/banking/logger"
+	"github.com/AJackTi/banking-lib/errs"
+	"github.com/AJackTi/banking-lib/logger"
 	"github.com/jmoiron/sqlx"
 )
 
