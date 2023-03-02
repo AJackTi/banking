@@ -28,14 +28,7 @@ func (s DefaultAccountService) NewAccount(req dto.NewAccountRequest) (*dto.NewAc
 		return nil, err
 	}
 
-	newAccount, err := s.repo.Save(&domain.Account{
-		AccountID:   "",
-		CustomerID:  req.CustomerID,
-		OpeningDate: time.Now().Format("2006-01-02 15:04:05"),
-		AccountType: req.AccountType,
-		Amount:      req.Amount,
-		Status:      "1",
-	})
+	newAccount, err := s.repo.Save(domain.NewAccount(req.CustomerID, req.AccountType, req.Amount))
 	if err != nil {
 		return nil, err
 	}
